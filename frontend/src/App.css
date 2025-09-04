@@ -1,0 +1,486 @@
+/* Reset e Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tema Principal */
+.app {
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* Tema Claro */
+.light-theme {
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+.light-theme .header {
+  background-color: white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.light-theme .company-name {
+  color: #15803d;
+}
+
+.light-theme .logo-icon {
+  background-color: #16a34a;
+}
+
+.light-theme .theme-toggle {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.light-theme .theme-toggle:hover {
+  background-color: #bbf7d0;
+}
+
+.light-theme .page-title h2 {
+  color: #15803d;
+}
+
+.light-theme .page-title p {
+  color: #6b7280;
+}
+
+.light-theme .project-card {
+  background-color: white;
+  border: 1px solid #bbf7d0;
+}
+
+.light-theme .project-card:hover {
+  background-color: #f0fdf4;
+}
+
+.light-theme .project-name {
+  color: #15803d;
+}
+
+.light-theme .project-description {
+  color: #6b7280;
+}
+
+.light-theme .progress-label {
+  color: #374151;
+}
+
+.light-theme .progress-percentage {
+  color: #16a34a;
+}
+
+.light-theme .progress-bar-container {
+  background-color: #e5e7eb;
+}
+
+.light-theme .last-updated {
+  color: #9ca3af;
+}
+
+.light-theme .footer {
+  border-top: 1px solid #bbf7d0;
+}
+
+.light-theme .footer p {
+  color: #6b7280;
+}
+
+/* Tema Escuro - Dracula */
+.dark-theme {
+  background-color: #282a36;
+  color: #f8f8f2;
+}
+
+.dark-theme .header {
+  background-color: #44475a;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
+.dark-theme .company-name {
+  color: #bd93f9;
+}
+
+.dark-theme .logo-icon {
+  background-color: #bd93f9;
+}
+
+.dark-theme .theme-toggle {
+  background-color: #6272a4;
+  color: #f8f8f2;
+}
+
+.dark-theme .theme-toggle:hover {
+  background-color: #bd93f9;
+}
+
+.dark-theme .page-title h2 {
+  color: #50fa7b;
+}
+
+.dark-theme .page-title p {
+  color: #6272a4;
+}
+
+.dark-theme .project-card {
+  background-color: #44475a;
+  border: 1px solid #6272a4;
+}
+
+.dark-theme .project-card:hover {
+  background-color: rgba(68, 71, 90, 0.8);
+}
+
+.dark-theme .project-name {
+  color: #50fa7b;
+}
+
+.dark-theme .project-description {
+  color: #6272a4;
+}
+
+.dark-theme .progress-label {
+  color: #f8f8f2;
+}
+
+.dark-theme .progress-percentage {
+  color: #50fa7b;
+}
+
+.dark-theme .progress-bar-container {
+  background-color: #282a36;
+}
+
+.dark-theme .last-updated {
+  color: #6272a4;
+}
+
+.dark-theme .footer {
+  border-top: 1px solid #44475a;
+}
+
+.dark-theme .footer p {
+  color: #6272a4;
+}
+
+/* Header */
+.header {
+  /*position: sticky;*/ /*HEADER FIXADO*/
+  top: 0;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.header-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 6rem;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 300px;
+  height: 64px;
+  justify-content: center;
+}
+
+.logotipo img {
+  height: 64px;
+}
+
+.theme-toggle {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Conteúdo Principal */
+.main-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-title h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.page-title p {
+  font-size: 1.125rem;
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+/* Grid de Projetos */
+.projects-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+.project-card {
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.project-header {
+  margin-bottom: 1rem;
+}
+
+.project-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Seção de Progresso */
+.progress-section {
+  margin-bottom: 0.75rem;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.progress-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.progress-percentage {
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 0.75rem;
+  border-radius: 9999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 9999px;
+  transition: all 0.7s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-shine {
+  position: absolute;
+  top: 0;
+  left: -1.5rem;
+  width: 1.5rem;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: skewX(-12deg);
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  0% { left: -1.5rem; }
+  100% { left: 100%; }
+}
+
+/* Footer do Projeto */
+.project-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.light-theme .status-completed {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.light-theme .status-progress {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.light-theme .status-started {
+  background-color: #fed7aa;
+  color: #9a3412;
+}
+
+.dark-theme .status-completed {
+  background-color: rgba(80, 250, 123, 0.2);
+  color: #50fa7b;
+}
+
+.dark-theme .status-progress {
+  background-color: rgba(241, 250, 140, 0.2);
+  color: #f1fa8c;
+}
+
+.dark-theme .status-started {
+  background-color: rgba(255, 184, 108, 0.2);
+  color: #ffb86c;
+}
+
+.last-updated {
+  font-size: 0.75rem;
+}
+
+/* Estatísticas */
+.stats-grid {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid;
+  transition: all 0.3s ease;
+}
+
+.light-theme .stat-card {
+  background-color: white;
+  border-color: #bbf7d0;
+}
+
+.light-theme .stat-card:hover {
+  background-color: #f0fdf4;
+}
+
+.dark-theme .stat-card {
+  background-color: #44475a;
+  border-color: #6272a4;
+}
+
+.dark-theme .stat-card:hover {
+  background-color: rgba(68, 71, 90, 0.8);
+}
+
+.stat-number {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.light-theme .stat-number {
+  color: #16a34a;
+}
+
+.dark-theme .stat-number {
+  color: #50fa7b;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+}
+
+.light-theme .stat-label {
+  color: #6b7280;
+}
+
+.dark-theme .stat-label {
+  color: #6272a4;
+}
+
+/* Footer */
+.footer {
+  margin-top: 4rem;
+  padding: 2rem 0;
+}
+
+.footer-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 0.875rem;
+}
+
+/* Responsividade */
+@media (min-width: 640px) {
+  .header-content {
+    padding: 0 1.5rem;
+  }
+  
+  .main-content {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .header-content {
+    padding: 0 2rem;
+  }
+  
+  .main-content {
+    padding: 2rem 2rem;
+  }
+}
