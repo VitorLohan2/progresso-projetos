@@ -14,21 +14,27 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
+    name: "Sistema de Visitantes - Liberaê (Beta)",
+    description: "Sistema está em fase de teste e novas funcionalidades estão sendo desenvolvidas.",
+    progress: 100
+  },
+  {
+    id: 2,
     name: "Aplicativo Liberaê (Mobile)",
     description: "Está em desenvolvimento um aplicativo para Android com interface moderna e funcionalidades avançadas.",
     progress: 30
   },
   {
-    id: 2,
+    id: 3,
     name: "DimeX",
     description: "Aguardando virada do C-Plus para obter acesso de dados Atualizados.",
     progress: 90
   },
   {
-    id: 5,
+    id: 4,
     name: "Sistema de Carregamento 2.0",
     description: "Versão 2.0 do Sistema de Carregamento com interface moderna e funcionalidades avançadas incluindo Dashboard e Gráficos em tempo real.",
-    progress: 50
+    progress: 30
   }
 ];
 
@@ -41,18 +47,18 @@ function App() {
 
   const getProgressColor = (progress: number) => {
     if (isDarkTheme) {
-      if (progress >= 80) return '#50fa7b'; // Dracula green
+      if (progress >= 100) return '#50fa7b'; // Dracula green
       if (progress >= 50) return '#f1fa8c'; // Dracula yellow  
       return '#ffb86c'; // Dracula orange
     } else {
-      if (progress >= 80) return '#059669'; // Green-600
+      if (progress >= 100) return '#059669'; // Green-600
       if (progress >= 50) return '#16a34a'; // Green-600
       return '#65a30d'; // Lime-600
     }
   };
 
   const getStatusText = (progress: number) => {
-    if (progress >= 80) return 'Quase Concluído';
+    if (progress >= 100) return 'Concluído';
     if (progress >= 50) return 'Em Andamento';
     return 'Iniciado';
   };
@@ -122,7 +128,7 @@ function App() {
               <div className="project-footer">
                 <span 
                   className={`status-badge ${
-                    project.progress >= 80 ? 'status-completed' : 
+                    project.progress >= 100 ? 'status-completed' : 
                     project.progress >= 50 ? 'status-progress' : 'status-started'
                   }`}
                 >
