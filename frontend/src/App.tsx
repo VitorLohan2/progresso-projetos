@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Moon, Sun, Building2 } from 'lucide-react';
+import { useState } from 'react';
+import { Moon, Sun } from 'lucide-react';
 import './App.css';
 import logo from './assets/logo.svg';
 import logoWhite from './assets/logo_white.png';
