@@ -28,7 +28,7 @@ const projects: Project[] = [
     id: 3,
     name: "DimeX",
     description: "Aguardando virada do C-Plus para obter acesso de dados Atualizados.",
-    progress: 90
+    progress: 99
   },
   {
     id: 4,
